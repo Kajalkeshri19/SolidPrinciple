@@ -1,4 +1,4 @@
-/* This code is voilating the Liskov Substitution Principle because the sub class (Square) is changing the functionality of base class (Rectangle). So, to remove this i have created a method void setSide which call setHeight and setWidth method which is implemented in class Rectangle.*/
+/* This code is voilating the Liskov Substitution Principle because the sub class (Square) is changing the functionality of base class (Rectangle). So, to remove this i have created a method void setSide which calls setHeight and setWidth method which is implemented in class Rectangle.*/
 
 class Rectangle{
   int m_width;
@@ -39,9 +39,9 @@ class Square extends Rectangle {
 public class Main {
 
   public static void main(String args[]) {
-    Square s = new Square();
-    s.setSide(5);
-    System.out.println(s.getArea());
+    Square obj = new Square();
+    obj.setSide(5);
+    System.out.println("Area is:" +obj.getArea());
   }
   
 }
